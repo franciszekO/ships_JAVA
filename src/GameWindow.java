@@ -62,12 +62,12 @@ public class GameWindow extends JFrame {
 
     private void updateStatus() {
 
-        statusLabel.setText("Shots left: " + logic.getRemainingShots());
+        statusLabel.setText("Strzały: " + logic.getRemainingShots());
     }
 
     private void resetGame() {
         logic = new GameLogic();
-        statusLabel.setText("Shots left: 8"); // reset
+        statusLabel.setText("Strzały: 8"); // reset
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 buttons[i][j].setEnabled(true);
