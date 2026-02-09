@@ -10,7 +10,7 @@ public class Main {
     private static final int BOARD_SIZE = 5;
     private static final int SHIPS_COUNT = 3;
 
-    // mapa
+    // Symbole używane na mapie
     private static final char WATER = '~';
     private static final char SHIP = 'S'; // Ten symbol jest ukryty dla gracza
     private static final char HIT = 'X';
