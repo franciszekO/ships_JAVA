@@ -6,7 +6,7 @@ public class GameWindow extends JFrame {
     private GameLogic logic = new GameLogic();
 
     public GameWindow() {
-        setTitle("Zatapianie statków by Franciszek");
+        setTitle("Zatapianie statków by Franciszek :)");
         setSize(500, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new GridLayout(5, 5));
