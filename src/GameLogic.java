@@ -1,43 +1,55 @@
 import java.util.Random;
 public class GameLogic {
-        private char[][] board;
-        private int shipsSunk = 0;
-        private final int SIZE = 5;
-        private final int SHIPS_COUNT = 3;
+    private char[][] board;
+    private int shipsSunk = 0;
+    private final int SIZE = 5;
+    private final int SHIPS_COUNT = 3;
+    private final int MAX_SHOTS = 8;
+    private int shotsTaken = 0;
 
-        public GameLogic() {
-            board = new char[SIZE][SIZE];
-            for (int i = 0; i < SIZE; i++) {
-                for (int j = 0; j < SIZE; j++) board[i][j] = '~';
-            }
-            placeShips();
+
+    public GameLogic() {
+        board = new char[SIZE][SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) board[i][j] = '~';
         }
+        placeShips();
+    }
 
-        private void placeShips() {
-            Random rand = new Random();
-            int placed = 0;
-            while (placed < SHIPS_COUNT) {
-                int r = rand.nextInt(SIZE), c = rand.nextInt(SIZE);
-                if (board[r][c] != 'S') {
-                    board[r][c] = 'S';
-                    placed++;
-                }
+    private void placeShips() {
+        Random rand = new Random();
+        int placed = 0;
+        while (placed < SHIPS_COUNT) {
+            int r = rand.nextInt(SIZE), c = rand.nextInt(SIZE);
+            if (board[r][c] != 'S') {
+                board[r][c] = 'S';
+                placed++;
             }
-        }
-
-        public String shoot(int r, int c) {
-            if (board[r][c] == 'S') {
-                board[r][c] = 'X';
-                shipsSunk++;
-                return "HIT";
-            } else {
-                board[r][c] = 'O';// fran
-                return "MISS";
-            }
-        }
-
-        public boolean isGameOver() {
-            return shipsSunk >= SHIPS_COUNT;
         }
     }
 
+    public String shoot(int r, int c) {
+        shotsTaken++;
+        if (board[r][c] == 'S') {
+            board[r][c] = 'X';
+            shipsSunk++;
+            return "HIT";
+        } else {
+            board[r][c] = 'O';// fran
+            return "MISS";
+        }
+    }
+
+    public boolean isGameOver() {
+        return shipsSunk >= SHIPS_COUNT;
+    }
+
+    public boolean isPlayerLost() {
+        return shotsTaken >= MAX_SHOTS && shipsSunk < SHIPS_COUNT;
+    }
+
+
+    public int getRemainingShots() {
+        return MAX_SHOTS - shotsTaken;
+    }
+}
