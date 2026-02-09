@@ -11,8 +11,8 @@ features
 
 how to Run
 1.  ensure you have Java installed.
-2.  compile the file: `javac Main.java`
-3.  run the game: `java Main`
+2.  compile the file: `Game window`
+3.  run the game: `Game window`
 
 tech Stack
  java (JDK 17+)
