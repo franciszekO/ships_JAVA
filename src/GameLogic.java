@@ -1,17 +1,18 @@
 import java.util.Random;
+
 public class GameLogic {
     private char[][] board;
     private int shipsSunk = 0;
     private final int SIZE = 5;
     private final int SHIPS_COUNT = 3;
-    private final int MAX_SHOTS = 8;
+    private final int MAX_SHOTS = 10;
     private int shotsTaken = 0;
-
 
     public GameLogic() {
         board = new char[SIZE][SIZE];
         for (int i = 0; i < SIZE; i++) {
-            for (int j = 0; j < SIZE; j++) board[i][j] = '~';
+            for (int j = 0; j < SIZE; j++)
+                board[i][j] = '~';
         }
         placeShips();
     }
@@ -47,7 +48,6 @@ public class GameLogic {
     public boolean isPlayerLost() {
         return shotsTaken >= MAX_SHOTS && shipsSunk < SHIPS_COUNT;
     }
-
 
     public int getRemainingShots() {
         return MAX_SHOTS - shotsTaken;
