@@ -18,7 +18,6 @@ public class GameWindow extends JFrame {
         statusLabel.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
         add(statusLabel, BorderLayout.NORTH);
 
-
         JPanel gridPanel = new JPanel(new GridLayout(5, 5));
         initializeButtons(gridPanel);
         add(gridPanel, BorderLayout.CENTER);
@@ -37,13 +36,12 @@ public class GameWindow extends JFrame {
                     buttons[finalR][finalC].setEnabled(false);
 
                     if (result.equals("HIT")) {
-                        buttons[finalR][finalC].setText("💥");
-                        buttons[finalR][finalC].setBackground(Color.RED);
+                        buttons[finalR][finalC].setText("");
+                        buttons[finalR][finalC].setBackground(Color.GREEN);
                     } else {
-                        buttons[finalR][finalC].setText("🌊");
-                        buttons[finalR][finalC].setBackground(Color.BLUE);
+                        buttons[finalR][finalC].setText("");
+                        buttons[finalR][finalC].setBackground(Color.RED);
                     }
-
 
                     updateStatus();
 
