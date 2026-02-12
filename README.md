@@ -10,7 +10,7 @@ features
  game Loop: Interactive turn-based gameplay.
 
 how to Run
-1.  ensure you have Java installed
+1.  have Java installed
 2.  compile the file: `Game window`
 3.  run the game: `Game window`
 
