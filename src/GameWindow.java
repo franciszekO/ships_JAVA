@@ -4,14 +4,14 @@ import java.awt.*;
 public class GameWindow extends JFrame {
     private JButton[][] buttons = new JButton[5][5];
     private GameLogic logic = new GameLogic();
-    // Nowy element: etykieta licznika
+   
     private JLabel statusLabel = new JLabel("Strzały: 0 / 8", SwingConstants.CENTER);
 
     public GameWindow() {
         setTitle("Zatapianie statków by Franciszek :)");
-        setSize(500, 550); // licznik wysok
+        setSize(500, 550); 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(new BorderLayout()); // uklad
+        setLayout(new BorderLayout()); 
 
         // licnzik
         statusLabel.setFont(new Font("Arial", Font.BOLD, 18));
