@@ -1,19 +1,21 @@
 # battleship game
 
 overview
- simple console-based implementation of the classic Battleship game written in Java. This project demonstrates core programming concepts such as 2D arrays, loops, conditional logic, and input validation.
+ simple console-based implementation of the classic battleship game written in Java. 
+ 
+ programming concepts: 2D arrays, loops, conditional logic, and input validation.
 
 features
- dynamic Board: 5x5 grid using 2D arrays.
- randomization: Ships are placed randomly at the start of each game.
- input Validation: Prevents users from entering invalid coordinates or crashing the program with non-integer inputs.
- game Loop: Interactive turn-based gameplay.
+ dynamic board: 5x5 grid using 2D arrays.
+ randomization: ships are placed randomly at the start of each game.
+ input Validation: prevents users from entering invalid coordinates or crashing the program with non-integer inputs.
+ game Loop: interactive turn-based gameplay.
 
-how to Run
+how to run
 1.  have Java installed
 2.  compile the file: `Game window`
 3.  run the game: `Game window`
 
-tech Stack
+tech stack
  java (JDK 17+)
  intelliJ IDEA
