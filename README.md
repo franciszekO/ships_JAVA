@@ -18,15 +18,18 @@ This is a classic Battleship game where the player tries to sink hidden ships on
 
 ### Game Start
 The adventure begins with a clean 5x5 grid. You have 10 shots to locate and sink 3 hidden ships.
-![Game Start](pending_screenshot_1)
+
+<img width="602" height="671" alt="java1" src="https://github.com/user-attachments/assets/755ab928-f228-49a8-a696-06df50a5c71f" />
 
 ### Gameplay
 As you fire, the grid reveals the truth. **Green** marks a hit, bringing you closer to victory, while **Red** indicates a miss, consuming your valuable ammunition.
-![Gameplay](pending_screenshot_2)
+
+<img width="597" height="667" alt="java2" src="https://github.com/user-attachments/assets/a0cbdfd1-19cb-4045-9234-f34508a0791c" />
 
 ### Game Over
 The conclusion of your mission. A distinct message informs you if you've successfully neutralized the enemy fleet or if you've depleted your resources.
-![Game Over](pending_screenshot_3)
+
+<img width="597" height="665" alt="java3" src="https://github.com/user-attachments/assets/4c5163c5-334a-47aa-bdef-be2313faa9d9" />
 
 ### How to Run
 
