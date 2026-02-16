@@ -9,11 +9,10 @@ public class GameWindow extends JFrame {
 
     public GameWindow() {
         setTitle("Zatapianie statków by Franciszek :)");
-        setSize(500, 550); // licznik wysok
+        setSize(500, 550);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(new BorderLayout()); // uklad
+        setLayout(new BorderLayout());
 
-        // licnzik
         statusLabel.setFont(new Font("Arial", Font.BOLD, 18));
         statusLabel.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
         add(statusLabel, BorderLayout.NORTH);
@@ -65,7 +64,7 @@ public class GameWindow extends JFrame {
 
     private void resetGame() {
         logic = new GameLogic();
-        statusLabel.setText("Strzały: 8"); // reset
+        statusLabel.setText("Strzały: " + logic.getRemainingShots());
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 buttons[i][j].setEnabled(true);

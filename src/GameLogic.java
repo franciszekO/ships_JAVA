@@ -36,7 +36,7 @@ public class GameLogic {
             shipsSunk++;
             return "HIT";
         } else {
-            board[r][c] = 'O';// fran
+            board[r][c] = 'O';
             return "MISS";
         }
     }
